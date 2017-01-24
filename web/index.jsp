@@ -22,9 +22,10 @@ if (request.getMethod().equals("POST")) {
     texto.append("<br/>");
     texto.append("Url: ");
     texto.append(request.getParameter("txtUrl"));
+    
     enviar.setMsg(texto.toString());
     
-    boolean enviou = enviar.enviarGmail();
+    boolean enviou = enviar.enviarHotmail();
     if (enviou) {
             
             mensagemUsuario = "Dados enviados com sucesso";
@@ -48,7 +49,7 @@ if (request.getMethod().equals("POST")) {
     <body>
         <h1>Envio de Email em Java/Gmail</h1>
         <div class="panel-heading">
-                Dados do Software
+                Dados do Software   '
             </div>
             <div class="panel-body">
                 <%if (mensagemUsuario != null) {%>
